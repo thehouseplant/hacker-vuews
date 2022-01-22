@@ -1,7 +1,11 @@
-.DS_Store
+# Node.js default
 node_modules
+
+# Build output
 /dist
 
+# macOS
+.DS_Store
 
 # local env files
 .env.local
