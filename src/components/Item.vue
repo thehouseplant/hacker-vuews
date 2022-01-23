@@ -10,22 +10,21 @@
         ({{ domain }})
       </span>
     </span>
-    <p>
-      <small>
-        <span v-if="points">
-          {{ points }} points
-        </span>
-        <span v-if="user">
-          by <router-link class="underline" :to="`/user/${user}`">{{ user }}</router-link> |
-        </span>
-        <span>
-          Posted {{ timeAgo }}
-        </span>
-        <span v-if="commentsCount > 0">
-          | <router-link class="underline" :to="`/item/${id}`">{{ commentsCount }} comments</router-link>
-        </span>
-      </small>
-    </p>
+    <br />
+    <small>
+      <span v-if="points">
+        {{ points }} points
+      </span>
+      <span v-if="user">
+        by <router-link class="underline" :to="`/user/${user}`">{{ user }}</router-link> |
+      </span>
+      <span>
+        Posted {{ timeAgo }}
+      </span>
+      <span v-if="commentsCount > 0">
+        | <router-link class="underline" :to="`/item/${id}`">{{ commentsCount }} comments</router-link>
+      </span>
+    </small>
   </span>
 </template>
 
