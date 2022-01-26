@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Top from '../views/Top.vue'
+import ItemPage from '../views/ItemPage.vue'
 import UserPage from '../views/UserPage.vue'
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
     path: '/jobs',
     name: 'Jobs',
     component: () => import(/* webpackChunkName: "jobs" */ '../views/Jobs.vue')
+  },
+  {
+    path: '/item/:id',
+    name: 'ItemPage',
+    component: ItemPage
   },
   {
     path: '/user/:user',
