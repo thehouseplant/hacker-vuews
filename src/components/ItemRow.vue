@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'Item',
+  name: 'ItemRow',
   props: {
     id: {
       type: Number,

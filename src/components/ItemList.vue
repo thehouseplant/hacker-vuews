@@ -4,7 +4,7 @@
       v-for="item in items"
       :key="item.id"
     >
-      <Item
+      <ItemRow
         :id="item.id"
         :title="item.title"
         :points="item.points"
@@ -19,11 +19,12 @@
 </template>
 
 <script>
-import Item from '@/components/Item'
+import ItemRow from '@/components/ItemRow'
+
 export default {
   name: 'ItemList',
   components: {
-    Item
+    ItemRow
   },
   data () {
     return {
