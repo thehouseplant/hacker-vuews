@@ -1,9 +1,7 @@
 <template>
   <div>
     <h1>{{ data.id }}</h1>
-    <cite>
-      {{ data.about }}
-    </cite>
+    <cite v-html="data.about" />
     <p v-if="data.karma">
       {{ data.karma }} total karma
     </p>
