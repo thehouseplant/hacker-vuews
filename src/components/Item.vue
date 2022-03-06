@@ -6,12 +6,18 @@
     </p>
     <p>
       <small>
-        {{ data.points }} by {{ data.user }} {{ data.time_ago }}
+        {{ data.points }} points |  
+        Posted by <router-link class="underline" :to="`/user/${data.user}`">{{ data.user }}</router-link> 
+        {{ data.time_ago }}
       </small>
     </p>
     <hr />
     <div v-for="comment in data.comments" :key="comment.id">
       <p v-html="comment.content" />
+      <small>
+        > Posted by <router-link class="underline" :to="`/user/${comment.user}`">{{ comment.user }}</router-link> 
+        {{ comment.time_ago }}
+      </small>
       <hr />
     </div>
   </div>
